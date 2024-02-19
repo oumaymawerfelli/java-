@@ -1,9 +1,8 @@
-package tn.esprit.gestionzoo.main;
 
-import tn.esprit.gestionzoo.entities.Animal;
-import tn.esprit.gestionzoo.entities.Zoo;
-import java.util.Arrays;
-import java.util.Scanner;
+
+
+import tn.esprit.gestionzoo.entitees.Animal;
+import tn.esprit.gestionzoo.entitees.Zoo;
 
 public class ZooManagement {
 
@@ -39,7 +38,7 @@ public class ZooManagement {
         System.out.println("a" + myZoo.removeAnimal(dog));
         myZoo.displayAnimals();
 
-//        System.out.println(Zoo.comparerZoo(myZoo, notMyZoo));
+//        System.out.println(tn.esprit.gestionzoo.entitees.Zoo.comparerZoo(myZoo, notMyZoo));
 //        System.out.println(myZoo.isZooFull());
 
     }
