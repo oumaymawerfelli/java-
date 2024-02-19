@@ -1,10 +1,8 @@
-package tn.esprit.gestionzoo.entities;
-
-import java.util.Arrays;
+package tn.esprit.gestionzoo.entitees;
 
 public class Zoo {
 
-    static final int NUMBER_OF_CAGES = 25;
+     public static final int NUMBER_OF_CAGES = 25;
     private Animal[] animals;
     private String name, city;
     private int nbrAnimals;
@@ -48,6 +46,23 @@ public class Zoo {
     }
     public String getName() {
         return this.name;
+    }
+    public void setName (String name){
+        if (name.isBlank())
+            System.out.println("name must contain caractere");
+        this.name =name;
+    }
+    public String getCity(){
+        return this.city;
+    }
+    public void setCity (String city){
+        this.city=city;
+    }
+    public void setNbrAnimals(int nbranimal){
+        this.nbrAnimals=nbranimal;
+    }
+    public int getNbrAnimals(){
+        return this.nbrAnimals;
     }
     public boolean removeAnimal(Animal animal) {
         int index = searchAnimal(animal);
