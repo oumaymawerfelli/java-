@@ -1,4 +1,4 @@
-package tn.esprit.gestionzoo.entities;
+package tn.esprit.gestionzoo.entitees;
 
 public class Animal {
     private String family; // L'attribut est maintenant privé
@@ -6,13 +6,21 @@ public class Animal {
     private int age;
     private boolean isMammal;
 
-    // Constructeur de la classe Animal
+    // Constructeur de la classe tn.esprit.gestionzoo.entitees.Animal
     public Animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
         this.name = name;
         setAge(age); // Utilisation de la méthode setAge pour garantir un âge non négatif
         this.isMammal = isMammal;
     }
+
+    public boolean isMammal() {
+        return isMammal;
+    }
+    public void setMammal(boolean mamal){
+        isMammal=mamal;
+    }
+
     public String getName() {
         return this.name;
     }
@@ -22,7 +30,7 @@ public class Animal {
             this.age = age;
         } else {
             System.out.println("L'âge ne peut pas être négatif. La valeur par défaut de 0 sera utilisée.");
-            this.age = 0; // Valeur par défaut si l'âge est négatif
+
         }
     }
 
@@ -35,7 +43,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "tn.esprit.gestionzoo.entitees.Animal{" +
                 "family='" + family + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
