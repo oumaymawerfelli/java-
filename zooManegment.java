@@ -1,3 +1,6 @@
+package tn.esprit.gestionzoo.main;
+
+import tn.esprit.gestionzoo.entitees.*;
 
 
 
@@ -11,6 +14,29 @@ public class ZooManagement {
 
         Zoo myZoo = new Zoo("Wildlife Park", "Ariana");
         Zoo notMyZoo = new Zoo("WaterPark", "Siliana");
+
+
+
+
+
+        TerrestrialAnimal terrestrialAnimal = new TerrestrialAnimal();
+        Dolphin dolphin = new Dolphin("Delphinidae", "Flipper", 10, true, "Ocean", 20.5f);
+        Penguin penguin = new Penguin("Spheniscidae", "Tux", 5, true, "Antarctica", 50.0f);
+
+        System.out.println(dolphin);
+
+
+        System.out.println(penguin);
+
+        System.out.println(terrestrialAnimal);
+
+
+
+
+
+        dolphin.swim();
+        penguin.swim();
+
 
         Animal dog = new Animal("Canine", "Snoopy", 2, true);
 
@@ -43,3 +69,4 @@ public class ZooManagement {
 
     }
 }
+
