@@ -1,5 +1,4 @@
 package tn.esprit.gestionzoo.entitees;
-
 public class Penguin extends AquaticAnimal {
     private float swimmingDepth;
 
