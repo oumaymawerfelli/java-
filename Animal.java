@@ -1,54 +1,64 @@
-package tn.esprit.gestionzoo.entitees;
+package tn.esprit.gestionzoo.entities;
 
 public class Animal {
-    private String family; // L'attribut est maintenant privé
+    private String family;
     private String name;
     private int age;
     private boolean isMammal;
 
-    // Constructeur de la classe tn.esprit.gestionzoo.entitees.Animal
+
+    public Animal(){
+
+    }
     public Animal(String family, String name, int age, boolean isMammal) {
         this.family = family;
         this.name = name;
-        setAge(age); // Utilisation de la méthode setAge pour garantir un âge non négatif
+        if(age >= 0)
+            this.age = age;
         this.isMammal = isMammal;
     }
 
-    public boolean isMammal() {
-        return isMammal;
-    }
-    public void setMammal(boolean mamal){
-        isMammal=mamal;
+    public String getFamily(){
+        return this.family;
     }
 
-    public String getName() {
+    public String getName(){
         return this.name;
     }
-    // Méthode publique pour définir l'âge avec une vérification de non-négativité
-    public void setAge(int age) {
-        if (age >= 0) {
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public boolean isMammal(){
+        return this.isMammal;
+    }
+
+    public void setFamily(String family){
+        this.family = family;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setAge(int age){
+        if(age >= 0)
             this.age = age;
-        } else {
-            System.out.println("L'âge ne peut pas être négatif. La valeur par défaut de 0 sera utilisée.");
-
-        }
     }
 
-    // Méthode publique pour obtenir l'âge
-    public int getAge() {
-        return age;
+    public void setMammal(boolean isMammal){
+        this.isMammal = isMammal;
     }
-
-    // Autres getters et setters pour les attributs name, family et isMammal
 
     @Override
-    public String toString() {
-        return "tn.esprit.gestionzoo.entitees.Animal{" +
-                "family='" + family + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", isMammal=" + isMammal +
-                '}';
+    public String toString(){
+        return name + " : " + family + " | " + age + " | " + isMammal;
     }
-}
 
+    @Override
+    public boolean equals(Object o){
+        return ((Animal)o).name.equals(this.name);
+    }
+
+}
